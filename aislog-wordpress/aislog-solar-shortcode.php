@@ -1,6 +1,6 @@
 <?php
 
-namespace PDJR\LogSolarShortcode;
+namespace PDJR\AisLogSolarShortcode;
 
 /**********************************************************************
  * Add support for [solar url='...'] shortcode. 
