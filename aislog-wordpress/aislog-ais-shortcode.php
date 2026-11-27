@@ -257,7 +257,9 @@ function render_ais_attachment($url) {
 function shortcode($atts, $content = null) {
   $retval = "";
   if ($atts['url']) {
-    $retval = do_shortcode(render_ais_attachment($atts['url'])[0]);
+    $decoded = render_ais_attachment($atts['url']);
+    $retval .= do_shortcode($decoded[0]);
+    wp_add_post_tags(get_the_ID(), $decoded[1]);
   }
   return($retval);
 }
