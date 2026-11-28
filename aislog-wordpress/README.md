@@ -38,13 +38,15 @@ configuration.
 1. If necessary, install the WordPress Postie plugin and configure it
    to retrieve and process messages from the dedicated email account to
    which 'aislog-uploader' sends its daily ais log.
-   Configure Postie so that it scans the email account once every hour.
+   Configure Postie so that it scans the email account once every hour
+   and deletes emails after processing.
 
 2. If necessary, install a WordPress extension that allows definition
    of new MIME types (I use the "Add MIME Types" plugin) and configure
    support for any non-standard file extensions.
-   At the very least you will need to add the 'ais' extension and
-   declare it to be of type 'text/plain'.
+   At the very least you will need to add the 'ais' extension (declare
+   it to be of type 'text/plain') and the 'batteries', 'solar' and
+   'tanks' extensions (declare these to be of type 'application/json'. 
 
 3. Login to your WordPress site host, and download the 'aislog' git
    repository.
