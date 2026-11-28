@@ -52,7 +52,7 @@ configuration.
    repository.
 
    ```bash
-   cd ~
+   cd
    git clone https://github.com/pdjr-signalk-plugins/aislog
    ```
 
