@@ -11,45 +11,53 @@ API calls.
 
 ## Installation
 
-Grab the git repository and install **aislog-uploader** and its
-associated systemd service file.
+1. Download the **aislog** git repository.
 
-```bash
-cd ~
+   ```bash
+   cd ~
+   git clone https://github.com/pdjr-signalk-plugins/aislog
+   ```
 
-git pull https://github.com/pdjr-signalk/ais-reporter.git
+2. Install **aislog-uploader** and its associated `systemd` service file.
 
-sudo cp ais-reporter/src/aislog-uploader/aislog-uploader /usr/local/bin/
-sudo cp ais-reporter/src/aislog-uploader/aislog-uploader.service /etc/systemd/system/
-sudo chmod 755 /usr/local/bin/aislog-uploader
-sudo chmod 644 /etc/systemd/system/aislog-uploader.service
-rm -rf ais-reporter
-```
+   ```bash
+   sudo cp aislog/aislog-uploader/aislog-uploader /usr/local/bin/
+   sudo cp aislog/aislog-uploader/aislog-uploader.service /etc/systemd/system/
+   sudo chmod 755 /usr/local/bin/aislog-uploader
+   sudo chmod 644 /etc/systemd/system/aislog-uploader.service
+   ```
 
-Create a system user for the new service and restart `systemd`.
+3. Delete the no-longer required git repository.
 
-```bash
-sudo useradd -r -s /usr/sbin/nologin aislog-uploader
-sudo systemctl daemon-reload
-```
+   ```bash
+   rm -rf aislog
+   ```
 
-Run **aislog-uploader** from the command line using the `-c` (configure)
-option to set the UDP port on which the server will listen for incoming
-AIS messages and the email recipient to whom consolidated daily logs
-will be posted.
-Do not simply copy the following command - set values appropriate for
-your use case.
+4. Create a system user for the **aislog-uploader** service and restart
+   `systemd`.
 
-```bash
-sudo aislog-uploader -c -p 12345 -r wordpress.user@example.com
-```
+   ```bash
+   sudo useradd -r -s /usr/sbin/nologin aislog-uploader
+   sudo systemctl daemon-reload
+   ```
 
-If you want the service to run automatically on system reboot then
-enable the service.
+5. Run **aislog-uploader** from the command line using the `-c`
+   (configure) option and set the UDP port on which the server will
+   listen for incoming AIS messages and the email recipient to whom
+   consolidated daily logs will be posted.
+   Do not simply copy the following command - set values appropriate
+   for your use case.
 
-```bash
-sudo systemctl enable aislog-uploader
-```
+   ```bash
+   sudo aislog-uploader -c -p 12345 -r wordpress.user@example.com
+   ```
+
+6. If you want the service to run automatically on system reboot then
+   enable the service (recommended).
+
+   ```bash
+   sudo systemctl enable aislog-uploader
+   ```
 
 ## Running the service
 
