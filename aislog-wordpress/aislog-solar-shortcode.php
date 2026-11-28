@@ -3,7 +3,8 @@
 namespace PDJR\AisLogSolarShortcode;
 
 /**********************************************************************
- * Add support for [solar url='...'] shortcode. 
+ * aislog-solar-shortcode.php (c) 2026 Paul Reeve
+ * WordPress plugin implements [solar url='...'] shortcode.
  */
 
 function render_solar_attachment($url) {

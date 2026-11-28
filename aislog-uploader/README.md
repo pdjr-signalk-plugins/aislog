@@ -1,13 +1,12 @@
 # aislog-uploader
 
-**aislog-uploader** is a stand-alone server which listens on a UDP
-port for incoming AIS !AIVDM position reports, rejects position
-duplicates, and collates filtered reports into a daily log.
-At end-of-day the daily log is sent by email to some recipient for
-archive storage or further processing.
+**aislog-uploader** is a stand-alone server which listens on a
+specified UDP port for incoming AIS !AIVDM position reports, rejects
+positional duplicates, and collates filtered reports into a daily log.
+At end-of-day the daily log is emailed to a nominated recipient.
 
 The end-of-day email can be configured to include attachments in
-addition to the log itself: either local files or the output from
+addition to the AIS log itself: either local files or the output from
 API calls.
 
 ## Installation

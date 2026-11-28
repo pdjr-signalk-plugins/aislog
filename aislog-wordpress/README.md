@@ -46,7 +46,7 @@ configuration.
    support for any non-standard file extensions.
    At the very least you will need to add the 'ais' extension (declare
    it to be of type 'text/plain') and the 'batteries', 'solar' and
-   'tanks' extensions (declare these to be of type 'application/json'. 
+   'tanks' extensions (declare these to be of type 'application/json').
 
 3. Login to your WordPress site host, and download the 'aislog' git
    repository.

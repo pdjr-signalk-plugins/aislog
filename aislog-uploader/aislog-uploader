@@ -1,4 +1,7 @@
 #!/bin/bash
+#######################################################################
+# aislog-uploader (c) 2026 Paul Reeve
+# Accumulate/upload AIS data to an email address.
 
 AISDECODE="/home/preeve/.local/bin/ais-decode -j"
 BASENAME="/usr/bin/basename"

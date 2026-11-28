@@ -3,11 +3,8 @@
 namespace PDJR\AisLogTanksShortcode;
 
 /**********************************************************************
- * Implements the [tanks url='...'] shortcode.
- * 
- * Processes the file passed via 'url' into an HTML flex table
- * presenting current level data. The supplied file must contain a JSON
- * formatted 'tanks' object returned by a call to the Signal K API.
+ * aislog-tanks-shortcode.php (c) 2026 Paul Reeve
+ * WordPress plugin implements [tanks url='...'] shortcode.
  */
 
 function render_tanks_attachment($url) {

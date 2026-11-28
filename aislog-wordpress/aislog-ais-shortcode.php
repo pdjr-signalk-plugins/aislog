@@ -3,9 +3,9 @@
 namespace PDJR\AisLogAisShortcode;
 
 /**********************************************************************
- * Add support for [ais url='...'] shortcode.
+ * aislog-ais-shortcode.php (c) 2026 Paul Reeve
+ * WordPress plugin implements [ais url='...'] shortcode.
  */
-
 
 $post_discard_attachments = array('application/json');
 $nominatum_url = 'https://nominatim.openstreetmap.org/reverse?';

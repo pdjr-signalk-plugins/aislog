@@ -3,8 +3,10 @@
 namespace PDJR\AisLogBatteriesShortcode;
 
 /**********************************************************************
- * Add support for [batteries url='...'] shortcode.
+ * aislog-batteries-shortcode.php (c) 2026 Paul Reeve
+ * WordPress plugin implements [batteries url='...'] shortcode.
  */
+
 
 function render_attachment($url) {
   $retval=["", []];

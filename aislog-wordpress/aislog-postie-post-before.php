@@ -3,8 +3,10 @@
 namespace PDJR\AisLogPostiePostBefore;
 
 /**********************************************************************
- * Implements a Postie 'post_before' filter which processes incoming
- * emails from 'aislog-uploader'.
+ * aislog-postie-post-before.php (c) 2026 Paul Reeve
+ * 
+ * WordPress plugin which implements a Postie 'post_before' filter that
+ * processes incoming emails from 'aislog-uploader'.
  *
  * The filter iterates over post attachments creating new post content
  * which includes either a shortcode or a hyperlink for each extension.
